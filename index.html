@@ -235,6 +235,8 @@ a{text-decoration:none;color:inherit}
 .vis-head h2{font-size:clamp(2rem,4.5vw,3.2rem);font-weight:900;letter-spacing:-.03em;margin-bottom:14px}
 .vis-head p{color:var(--text2);font-size:1.05rem}
 
+.stats-viz-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-bottom:56px}
+.stats-col{display:flex;flex-direction:column;gap:16px}
 .site-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:56px}
 .s-stat{
   background:var(--bg-card);border:1px solid var(--border);border-radius:var(--r-md);
@@ -378,6 +380,7 @@ a{text-decoration:none;color:inherit}
   .burger{display:block}
   .part-grid,.fp-grid{grid-template-columns:1fr;gap:40px}
   .travel-grid{grid-template-columns:repeat(2,1fr)}
+  .stats-viz-grid{grid-template-columns:1fr}
   .site-stats{grid-template-columns:1fr}
   .zones{grid-template-columns:1fr}
   .steps{flex-wrap:wrap;gap:24px}
@@ -529,21 +532,26 @@ a{text-decoration:none;color:inherit}
       <p>A fully fenced and secured industrial site with direct road access. Purpose-built zones for every stage of Zoomlion's European operations.</p>
     </div>
 
-    <div class="site-stats">
-      <div class="s-stat rv">
-        <div class="s-stat-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 3v18"/></svg></div>
-        <div class="s-stat-val">250,000 m²</div>
-        <div class="s-stat-lbl">Total Site Area</div>
+    <div class="stats-viz-grid">
+      <div class="stats-col">
+        <div class="s-stat rv">
+          <div class="s-stat-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 3v18"/></svg></div>
+          <div class="s-stat-val">250,000 m²</div>
+          <div class="s-stat-lbl">Total Site Area</div>
+        </div>
+        <div class="s-stat rv rv-d1">
+          <div class="s-stat-icon"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V7l7-4 7 4v14"/><path d="M9 21v-6h6v6"/></svg></div>
+          <div class="s-stat-val">32,000+ m²</div>
+          <div class="s-stat-lbl">Built Area</div>
+        </div>
+        <div class="s-stat rv rv-d2">
+          <div class="s-stat-icon"><svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+          <div class="s-stat-val">60,000+ m²</div>
+          <div class="s-stat-lbl">Handling Area</div>
+        </div>
       </div>
-      <div class="s-stat rv rv-d1">
-        <div class="s-stat-icon"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V7l7-4 7 4v14"/><path d="M9 21v-6h6v6"/></svg></div>
-        <div class="s-stat-val">32,000+ m²</div>
-        <div class="s-stat-lbl">Built Area</div>
-      </div>
-      <div class="s-stat rv rv-d2">
-        <div class="s-stat-icon"><svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
-        <div class="s-stat-val">60,000+ m²</div>
-        <div class="s-stat-lbl">Handling Area</div>
+      <div class="viz-col rv rv-d2">
+        <img src="vizualizace.png" alt="CR Park site visualization" style="width:100%;height:100%;object-fit:cover;border-radius:16px">
       </div>
     </div>
 
