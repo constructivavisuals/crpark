@@ -286,22 +286,31 @@ a{text-decoration:none;color:inherit}
 .proc-head h2{font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:800;letter-spacing:-.02em;margin-bottom:10px}
 .proc-head p{color:var(--text2);font-size:1.02rem}
 
-.steps{display:flex;justify-content:center;position:relative;gap:0}
-.step{flex:1;max-width:200px;text-align:center;position:relative;padding:0 12px}
-.step-num{
-  width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;
-  font-weight:800;font-size:1.15rem;margin:0 auto 14px;position:relative;z-index:2;transition:.4s var(--ease);
+.steps{display:flex;align-items:center;justify-content:center;gap:0}
+.step{display:flex;flex-direction:column;align-items:center;text-align:center;position:relative;width:140px}
+.step.top{flex-direction:column-reverse}
+.step-circle{
+  width:80px;height:80px;border-radius:50%;border:3px solid var(--green);
+  display:flex;align-items:center;justify-content:center;position:relative;
+  background:var(--bg-card);transition:all .4s var(--ease);
 }
-.step-num.gn{background:var(--green);color:var(--bg)}
-.step-num.ol{background:transparent;border:2px solid var(--text3);color:var(--text2)}
-.step-num.or{background:var(--orange);color:var(--bg)}
-.step:hover .step-num{transform:scale(1.12);box-shadow:0 0 20px rgba(180,211,53,.25)}
-.step-con{position:absolute;top:26px;left:calc(50% + 26px);width:calc(100% - 52px);height:2px;background:var(--text3);z-index:1}
-.step:last-child .step-con{display:none}
-.step-ico{font-size:1.4rem;margin-bottom:6px}
+.step-circle.or-border{border-color:var(--orange)}
+.step-circle:hover{transform:scale(1.08);box-shadow:0 0 24px rgba(180,211,53,.2)}
+.step-circle.or-border:hover{box-shadow:0 0 24px rgba(245,146,27,.2)}
+.step-circle svg{width:34px;height:34px;stroke:var(--green);fill:none;stroke-width:1.6}
+.step-circle svg.or-ico{stroke:var(--orange)}
+.step-badge{
+  position:absolute;top:-4px;right:-4px;width:24px;height:24px;border-radius:50%;
+  background:var(--green);color:var(--bg);font-size:.7rem;font-weight:800;
+  display:flex;align-items:center;justify-content:center;
+}
+.step-badge.or-bg{background:var(--orange)}
+.step-info{padding:14px 0}
 .step-title{font-weight:700;font-size:.88rem;margin-bottom:4px}
 .step-title.hl{color:var(--green)}
+.step-title.or{color:var(--orange)}
 .step-desc{font-size:.73rem;color:var(--text3);line-height:1.45}
+.step-arrow{display:flex;align-items:center;color:var(--text3);font-size:1.4rem;padding:0 6px;align-self:center}
 
 /* ══════════════════════════════════════════
    SECURITY
@@ -384,7 +393,8 @@ a{text-decoration:none;color:inherit}
   .site-stats{grid-template-columns:1fr}
   .zones{grid-template-columns:1fr}
   .steps{flex-wrap:wrap;gap:24px}
-  .step-con{display:none!important}
+  .step.top{flex-direction:column}
+  .step-arrow{display:none}
   .sec-grid{grid-template-columns:1fr}
   .reach{flex-direction:column;text-align:center;gap:20px}
   .fp-chips{grid-template-columns:1fr}
@@ -610,40 +620,65 @@ a{text-decoration:none;color:inherit}
       <p>A seamless supply chain connecting Zoomlion's manufacturing to European dealers and end customers.</p>
     </div>
 
-    <div class="steps">
-      <div class="step rv">
-        <div class="step-num ol">1</div>
-        <div class="step-con"></div>
-        <div class="step-ico">🏭</div>
-        <div class="step-title">Manufactured</div>
-        <div class="step-desc">Machines built in component blocks, packed for ocean freight</div>
+    <div class="steps rv">
+      <!-- Step 1 — bottom text -->
+      <div class="step">
+        <div class="step-circle">
+          <span class="step-badge">1</span>
+          <svg viewBox="0 0 24 24"><path d="M3 21h18M4 21V10l4-3v14M10 21V7l6-4v18M18 21V10l3 2v9"/></svg>
+        </div>
+        <div class="step-info">
+          <div class="step-title">Manufactured</div>
+          <div class="step-desc">Built &amp; packed for freight</div>
+        </div>
       </div>
-      <div class="step rv rv-d1">
-        <div class="step-num ol">2</div>
-        <div class="step-con"></div>
-        <div class="step-ico">🚢</div>
-        <div class="step-title">Arrive in Europe</div>
-        <div class="step-desc">Containers unloaded at Hamburg or Rotterdam port</div>
+      <div class="step-arrow">→</div>
+      <!-- Step 2 — top text -->
+      <div class="step top">
+        <div class="step-circle">
+          <span class="step-badge">2</span>
+          <svg viewBox="0 0 24 24"><path d="M2 20h20M4 20v-6l4-4h8l4 4v6M6 10V6h4v4M14 10V6h4v4M2 20l3-10h14l3 10"/></svg>
+        </div>
+        <div class="step-info">
+          <div class="step-title">Arrive in Europe</div>
+          <div class="step-desc">Hamburg / Rotterdam port</div>
+        </div>
       </div>
-      <div class="step rv rv-d2">
-        <div class="step-num gn">3</div>
-        <div class="step-con"></div>
-        <div class="step-ico">🏗️</div>
-        <div class="step-title hl">CR PARK</div>
-        <div class="step-desc">Receive, inspect (PDI), assemble, configure for EU market</div>
+      <div class="step-arrow">→</div>
+      <!-- Step 3 — bottom text -->
+      <div class="step">
+        <div class="step-circle">
+          <span class="step-badge">3</span>
+          <svg class="or-ico" viewBox="0 0 24 24"><path d="M3 21h18M5 21V8l7-5 7 5v13"/><path d="M9 21v-6h6v6"/><path d="M9 12h.01M15 12h.01"/></svg>
+        </div>
+        <div class="step-info">
+          <div class="step-title hl">CR PARK</div>
+          <div class="step-desc">Inspect, assemble, configure</div>
+        </div>
       </div>
-      <div class="step rv rv-d3">
-        <div class="step-num ol">4</div>
-        <div class="step-con"></div>
-        <div class="step-ico">✅</div>
-        <div class="step-title">EU Certified</div>
-        <div class="step-desc">CE marking, EU configuration, quality sign-off</div>
+      <div class="step-arrow">→</div>
+      <!-- Step 4 — top text -->
+      <div class="step top">
+        <div class="step-circle">
+          <span class="step-badge">4</span>
+          <svg class="or-ico" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9 12l2 2 4-4"/></svg>
+        </div>
+        <div class="step-info">
+          <div class="step-title">EU Certified</div>
+          <div class="step-desc">CE marking &amp; quality sign-off</div>
+        </div>
       </div>
-      <div class="step rv rv-d4">
-        <div class="step-num or">5</div>
-        <div class="step-ico">🚛</div>
-        <div class="step-title">Delivered</div>
-        <div class="step-desc">Machine delivered to dealer or end customer across Europe</div>
+      <div class="step-arrow">→</div>
+      <!-- Step 5 — bottom text -->
+      <div class="step">
+        <div class="step-circle or-border">
+          <span class="step-badge or-bg">5</span>
+          <svg class="or-ico" viewBox="0 0 24 24"><path d="M1 14h14V6H1v8zM15 14h4l3 3v3h-7v-6z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+        </div>
+        <div class="step-info">
+          <div class="step-title or">Delivered</div>
+          <div class="step-desc">To dealer or end customer</div>
+        </div>
       </div>
     </div>
   </div>
