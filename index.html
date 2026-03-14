@@ -506,56 +506,15 @@ a{text-decoration:none;color:inherit}
 
 <div class="divider"></div>
 
-<!-- ════════ EUROPEAN FOOTPRINT ════════ -->
+<!-- ════════ SITE VISUALIZATION ════════ -->
 <section class="footprint section" id="footprint">
   <div class="container">
-    <div class="fp-grid">
-      <div class="fp-map rv">
-        <!-- Europe map SVG simplified -->
-        <svg viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg" style="width:90%">
-          <!-- Simplified Europe outline -->
-          <path d="M120 60 Q140 50 170 55 Q200 50 230 40 Q260 35 290 45 Q320 40 350 50 Q380 55 400 70 Q420 85 430 110 Q440 140 435 170 Q440 200 430 230 Q420 250 400 270 Q380 285 360 290 Q340 300 310 310 Q280 320 250 320 Q220 315 190 310 Q160 300 140 280 Q120 260 110 230 Q100 200 105 170 Q100 140 110 110 Q115 85 120 60Z" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
-          <!-- Connection lines from CR Park -->
-          <g stroke="var(--green)" stroke-width="1.5" stroke-dasharray="4 4" opacity="0.5">
-            <line x1="300" y1="190" x2="220" y2="140"/><!-- Germany -->
-            <line x1="300" y1="190" x2="350" y2="230"/><!-- Vienna -->
-            <line x1="300" y1="190" x2="370" y2="150"/><!-- Warsaw -->
-            <line x1="300" y1="190" x2="180" y2="180"/><!-- Belgium -->
-            <line x1="300" y1="190" x2="200" y2="90"/><!-- Netherlands -->
-            <line x1="300" y1="190" x2="340" y2="80"/><!-- Sweden -->
-          </g>
-          <!-- CR Park dot -->
-          <circle cx="300" cy="190" r="8" fill="var(--green)"/>
-          <circle cx="300" cy="190" r="14" fill="none" stroke="var(--green)" stroke-width="1.5" opacity="0.3">
-            <animate attributeName="r" values="14;22;14" dur="2s" repeatCount="indefinite"/>
-            <animate attributeName="opacity" values="0.3;0;0.3" dur="2s" repeatCount="indefinite"/>
-          </circle>
-          <text x="310" y="188" fill="var(--green)" font-size="9" font-family="var(--mono)" font-weight="600">CR PARK</text>
-          <!-- Other facilities -->
-          <circle cx="220" cy="140" r="4" fill="rgba(255,255,255,0.3)"/><text x="172" y="134" fill="var(--text2)" font-size="7" font-family="var(--mono)">DE Factory</text>
-          <circle cx="200" cy="90" r="4" fill="rgba(255,255,255,0.3)"/><text x="155" y="84" fill="var(--text2)" font-size="7" font-family="var(--mono)">Raxtar</text>
-          <circle cx="180" cy="180" r="4" fill="rgba(255,255,255,0.3)"/><text x="120" y="176" fill="var(--text2)" font-size="7" font-family="var(--mono)">Belgium</text>
-          <circle cx="130" cy="160" r="4" fill="rgba(255,255,255,0.3)"/><text x="82" y="156" fill="var(--text2)" font-size="7" font-family="var(--mono)">UK</text>
-          <circle cx="340" cy="80" r="4" fill="rgba(255,255,255,0.3)"/><text x="348" y="78" fill="var(--text2)" font-size="7" font-family="var(--mono)">Sweden</text>
-          <circle cx="160" cy="270" r="4" fill="rgba(255,255,255,0.3)"/><text x="115" y="266" fill="var(--text2)" font-size="7" font-family="var(--mono)">France</text>
-          <circle cx="340" cy="290" r="4" fill="rgba(255,255,255,0.3)"/><text x="348" y="288" fill="var(--text2)" font-size="7" font-family="var(--mono)">CIFA</text>
-          <circle cx="290" cy="280" r="4" fill="rgba(255,255,255,0.3)"/><text x="244" y="278" fill="var(--text2)" font-size="7" font-family="var(--mono)">MEWP</text>
-        </svg>
+    <div class="rv" style="text-align:center">
+      <div style="max-width:700px;margin:0 auto 40px">
+        <h2 style="font-size:clamp(2rem,4.5vw,3.2rem);font-weight:900;letter-spacing:-.03em;margin-bottom:14px">Total Site <span class="green">Vision</span></h2>
+        <p style="color:var(--text2);font-size:1.05rem">A fully fenced and secured industrial site with direct road access from Route 112. Purpose-built zones for every stage of Zoomlion's European operations.</p>
       </div>
-      <div class="fp-text rv rv-d2">
-        <h2>Zoomlion's European Footprint — <span class="green">CR PARK as the Next Step</span></h2>
-        <p>Zoomlion has established production and distribution facilities across key European markets. CR PARK extends this network with a strategically positioned Central European hub — bridging Eastern and Western Europe.</p>
-        <div class="fp-chips">
-          <div class="chip hl"><span class="chip-dot"></span>CR PARK · Central European Hub</div>
-          <div class="chip"><span class="chip-dot"></span>Germany Factory Ph. I+II</div>
-          <div class="chip"><span class="chip-dot"></span>Raxtar · Distribution</div>
-          <div class="chip"><span class="chip-dot"></span>Belgium Subsidiary</div>
-          <div class="chip"><span class="chip-dot"></span>UK Powermole</div>
-          <div class="chip"><span class="chip-dot"></span>France Subsidiary</div>
-          <div class="chip"><span class="chip-dot"></span>Sweden Subsidiary</div>
-          <div class="chip"><span class="chip-dot"></span>MEWP & CIFA Factories</div>
-        </div>
-      </div>
+      <img src="vizualizace.png" alt="CR Park site visualization" style="width:100%;border-radius:24px;border:1px solid rgba(255,255,255,0.06)">
     </div>
   </div>
 </section>
