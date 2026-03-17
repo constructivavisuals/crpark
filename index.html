@@ -394,11 +394,14 @@ a{text-decoration:none;color:inherit}
    RESPONSIVE
    ══════════════════════════════════════════ */
 @media(max-width:900px){
+  .nav-cta{display:none}
+  .nav-logo img{transform:scale(0.75)}
   .nav-links{display:none}
   .burger{display:block}
   .fp-chips{grid-template-columns:1fr!important}
   .reach-map-grid{grid-template-columns:1fr}
   .part-grid,.fp-grid{grid-template-columns:1fr;gap:40px}
+  .part-logos img{transform:scale(0.7)}
   .loc-grid{grid-template-columns:1fr}
   .heritage-grid{grid-template-columns:1fr}
   .stats-viz-grid{grid-template-columns:1fr}
@@ -412,6 +415,9 @@ a{text-decoration:none;color:inherit}
   .fp-chips{grid-template-columns:1fr}
   .cta-contacts{flex-direction:column;gap:16px}
   .footer-in{flex-direction:column;gap:16px;text-align:center}
+  .hero-badge{margin-top:24px}
+  .scroll-ind{display:none}
+  .container{overflow:hidden}
 }
 @media(max-width:600px){
   .hero-stats{flex-direction:column;gap:20px}
